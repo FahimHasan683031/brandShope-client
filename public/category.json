@@ -1,0 +1,33 @@
+[
+    {
+      "id": "1",
+      "categoryName": "Samsung",
+      "image": "https://static1.srcdn.com/wordpress/wp-content/uploads/2022/08/Samsung-Galaxy-Unpacked-2022-All-Products.png?q=50&fit=contain&w=1140&h=&dpr=1.5"
+    },
+    {
+      "id": "2",
+      "categoryName": "Apple",
+      "image": "https://img.freepik.com/premium-photo/ecommerce-apple-all-products-devices_862994-4609.jpg"
+    },
+    {
+      "id": "3",
+      "categoryName": "Google",
+      "image": "https://i.insider.com/57f4092557540c22128b48f6?width=1090&format=jpeg"
+    },
+    {
+      "id": "4",
+      "categoryName": "OnePlus",
+      "image": "https://gumlet.assettype.com/digitalterminal%2Fimport%2Fuploads%2Fnews%2F1624623430s_Avail-Amazing-Deals-on-OnePlus-Products.jpg?auto=format%2Ccompress&fit=max&format=webp&w=400&dpr=2.6"
+    },
+    {
+      "id": "5",
+      "categoryName": "HP",
+      "image": "https://zmnalholol.com/wp-content/uploads/2021/12/%D9%85%D9%86%D8%AA%D8%AC%D8%A7%D8%AA-%D8%A7%D8%AA%D8%B4-%D8%A8%D9%8A.jpg"
+    },
+    {
+      "id": "6",
+      "categoryName": "Dell",
+      "image": "https://i.pcmag.com/imagery/articles/06roIMOMrbXWEx0hx5O4aI0-1..v1581018512.png"
+    }
+  ]
+  

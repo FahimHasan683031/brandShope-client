@@ -13,6 +13,19 @@ const AddProduct = () => {
         const description = form.description.value;
         const product = {name,imageUrl,brandName,productType,price,rating,description}
         console.log(product)
+
+        fetch('http://localhost:5000/products',{
+            method:'POST',
+            headers:{
+                "Content-Type":"application/json"
+            },
+            body:JSON.stringify(product)
+        })
+        .then(res => res.json())
+        .then(data =>{
+            console.log(data)
+            form.reset()
+        })
     }
     return (
         <div className="max-w-screen-xl mx-auto px-6">
@@ -47,7 +60,7 @@ const AddProduct = () => {
                             <option value="samsung">Samsung</option>
                             <option value="apple">Apple</option>
                             <option value="google">Google</option>
-                            <option value="onePlus">One Plus</option>
+                            <option value="oneplus">One Plus</option>
                             <option value="hp">hp</option>
                             <option value="dell">Dell</option>
                         </select>

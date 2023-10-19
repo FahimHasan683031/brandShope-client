@@ -6,6 +6,7 @@ import Cart from "../Pages/Cart";
 import Login from "../Pages/Login";
 import Signup from "../Pages/Signup";
 import PrivetRout from "../Components/Privet/PrivetRout";
+import ProductShow from "../Components/ProductShow/ProductShow";
 
 const router = createBrowserRouter([
     {
@@ -31,6 +32,11 @@ const router = createBrowserRouter([
         {
           path:'/signup',
           element:<Signup></Signup>
+        },
+        {
+          path:'/products/:category',
+          element:<ProductShow></ProductShow>,
+          loader:({params})=>fetch(`http://localhost:5000/products/${params.category}`)
         }
       ]
     },
