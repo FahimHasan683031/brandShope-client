@@ -7,6 +7,8 @@ import Login from "../Pages/Login";
 import Signup from "../Pages/Signup";
 import PrivetRout from "../Components/Privet/PrivetRout";
 import ProductShow from "../Components/ProductShow/ProductShow";
+import ProductDetails from "../Components/ProductShow/ProductDetails";
+import ProductUpdate from "../Pages/ProductUpdate";
 
 const router = createBrowserRouter([
     {
@@ -37,6 +39,16 @@ const router = createBrowserRouter([
           path:'/products/:category',
           element:<ProductShow></ProductShow>,
           loader:({params})=>fetch(`http://localhost:5000/products/${params.category}`)
+        },
+        {
+          path:'/product/:id',
+          element:<ProductDetails></ProductDetails>,
+          loader:({params})=>fetch(`http://localhost:5000/product/${params.id}`)
+        },
+        {
+          path:'/productUpdate/:id',
+          element:<ProductUpdate></ProductUpdate>,
+          loader:({params})=>fetch(`http://localhost:5000/product/${params.id}`)
         }
       ]
     },

@@ -6,7 +6,7 @@ import { Rating } from "@mui/material";
 const ProductSingle = ({ product }) => {
     
 
-    const { name, imageUrl, brandName, productType, price, rating, description } = product;
+    const { name, imageUrl, brandName, productType, price, rating, description, _id } = product;
 
     const sadow = {
         boxShadow: '0 0 22px #77777752',
@@ -30,8 +30,8 @@ const ProductSingle = ({ product }) => {
                 </div>
                 <p className="text-sm mb-3 font-medium text-gray-400">{description.slice(0, 150)}...</p>
                 <div className="flex gap-9 mt-6">
-                    <Link className="text-white font-medium py-2 px-4 rounded-full bg-purple-700">Details</Link>
-                    <Link className="text-white font-medium py-2 px-4 rounded-full bg-purple-700">Update</Link>
+                    <Link to={`/product/${_id}`} className="text-white font-medium py-2 px-4 rounded-full bg-purple-700">Details</Link>
+                    <Link to={`/productUpdate/${_id}`} className="text-white font-medium py-2 px-4 rounded-full bg-purple-700">Update</Link>
                 </div>
             </div>
         </div>
