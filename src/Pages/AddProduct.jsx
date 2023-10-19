@@ -1,6 +1,10 @@
+import { useContext } from "react";
+import { AuthContext } from "../Context/AuthProvider";
 
 
 const AddProduct = () => {
+
+    
     const formHandle = e => {
         e.preventDefault()
         const form = e.target;

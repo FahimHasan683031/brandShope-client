@@ -2,7 +2,7 @@ import { createBrowserRouter } from "react-router-dom";
 import Home from "../Pages/Home/Home";
 import Main from "../MainLayout/MainLayout";
 import AddProduct from "../Pages/AddProduct";
-import Cart from "../Pages/Cart";
+import Cart from "../Pages/Cart/Cart";
 import Login from "../Pages/Login";
 import Signup from "../Pages/Signup";
 import PrivetRout from "../Components/Privet/PrivetRout";
@@ -25,7 +25,8 @@ const router = createBrowserRouter([
         },
         {
           path:'/cart',
-          element:<PrivetRout><Cart></Cart></PrivetRout>
+          element:<PrivetRout><Cart></Cart></PrivetRout>,
+          loader:()=>fetch('http://localhost:5000/cart')
         },
         {
           path:'/login',

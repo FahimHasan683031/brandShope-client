@@ -4,6 +4,20 @@ import { Rating } from "@mui/material";
 const ProductDetails = () => {
     const product = useLoaderData()
     const { name, imageUrl, brandName, productType, price, rating, description, }=product;
+    const addCartHandle = ()=>{
+        fetch('http://localhost:5000/cart',{
+            method:'POST',
+            headers:{
+                "Content-Type":"application/json"
+            },
+            body:JSON.stringify(product)
+        })
+        .then(res => res.json())
+        .then(data =>{
+            console.log(data)
+            
+        })
+    }
     return (
         <div>
             <div className="max-w-screen-sm mx-auto my-10 px-6">
@@ -19,7 +33,7 @@ const ProductDetails = () => {
                 </div>
                 <p className="text-base mb-12 font-medium text-gray-400">{description}</p>
                 <div>
-                <Link  className="py-3 px-12 rounded bg-purple-700 text-base font-bold text-white ">Add to Cart</Link>
+                <Link onClick={addCartHandle}  className="py-3 px-12 rounded bg-purple-700 text-base font-bold text-white ">Add to Cart</Link>
 
                 </div>
             </div>
