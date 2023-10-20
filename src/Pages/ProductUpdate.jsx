@@ -1,7 +1,9 @@
-import { useLoaderData } from "react-router-dom";
+import toast from "react-hot-toast";
+import { useLoaderData, useNavigate } from "react-router-dom";
 
 const ProductUpdate = () => {
     const data = useLoaderData()
+    const navigate = useNavigate()
     const formHandle = e => {
         e.preventDefault()
         const form = e.target;
@@ -15,7 +17,7 @@ const ProductUpdate = () => {
         const product = { name, imageUrl, brandName, productType, price, rating, description }
         console.log(product)
 
-        fetch(`http://localhost:5000/products/${data._id}`, {
+        fetch(`https://brand-shope.vercel.app/products/${data._id}`, {
             method: 'PUT',
             headers: {
                 "Content-Type": "application/json"
@@ -25,6 +27,10 @@ const ProductUpdate = () => {
             .then(res => res.json())
             .then(data => {
                 console.log(data)
+                if(data.modifiedCount){
+                    toast.success('Successfully Update!')
+                    navigate('/')
+                }
                 // form.reset()
             })
     }

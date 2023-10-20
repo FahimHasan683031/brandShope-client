@@ -26,7 +26,7 @@ const router = createBrowserRouter([
         {
           path:'/cart',
           element:<PrivetRout><Cart></Cart></PrivetRout>,
-          loader:()=>fetch('http://localhost:5000/cart')
+          loader:()=>fetch('https://brand-shope.vercel.app/cart')
         },
         {
           path:'/login',
@@ -38,18 +38,18 @@ const router = createBrowserRouter([
         },
         {
           path:'/products/:category',
-          element:<ProductShow></ProductShow>,
-          loader:({params})=>fetch(`http://localhost:5000/products/${params.category}`)
+          element:<PrivetRout><ProductShow></ProductShow></PrivetRout>,
+          loader:({params})=>fetch(`https://brand-shope.vercel.app/products/${params.category}`)
         },
         {
           path:'/product/:id',
           element:<ProductDetails></ProductDetails>,
-          loader:({params})=>fetch(`http://localhost:5000/product/${params.id}`)
+          loader:({params})=>fetch(`https://brand-shope.vercel.app/product/${params.id}`)
         },
         {
           path:'/productUpdate/:id',
           element:<ProductUpdate></ProductUpdate>,
-          loader:({params})=>fetch(`http://localhost:5000/product/${params.id}`)
+          loader:({params})=>fetch(`https://brand-shope.vercel.app/product/${params.id}`)
         }
       ]
     },

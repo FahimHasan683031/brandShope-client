@@ -1,4 +1,4 @@
-
+import toast from "react-hot-toast";
 
 
 const AddProduct = () => {
@@ -17,7 +17,7 @@ const AddProduct = () => {
         const product = {name,imageUrl,brandName,productType,price,rating,description}
         console.log(product)
 
-        fetch('http://localhost:5000/products',{
+        fetch('https://brand-shope.vercel.app/products',{
             method:'POST',
             headers:{
                 "Content-Type":"application/json"
@@ -27,7 +27,11 @@ const AddProduct = () => {
         .then(res => res.json())
         .then(data =>{
             console.log(data)
-            form.reset()
+            if(data.acknowledged){
+                toast.success('Successfully Add Product!')
+                form.reset()
+            }
+            
         })
     }
     return (

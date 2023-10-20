@@ -77,7 +77,7 @@ const Login = () => {
                                 }
                             </div>
                             <div className="mt-3">
-                                <p>New user? Please <Link className="text-blue-700" to='/register'>Register</Link></p>
+                                <p>New user? Please <Link className="text-blue-700" to='/signup'>Register</Link></p>
                             </div>
                             <div className="form-control mt-4">
                                 <button type="submit" className="py-3 text-white font-bold bg-purple-700 rounded">Login</button>

@@ -1,11 +1,12 @@
 import { Link, useLoaderData } from "react-router-dom";
 import { Rating } from "@mui/material";
+import toast from "react-hot-toast";
 
 const ProductDetails = () => {
     const product = useLoaderData()
     const { name, imageUrl, brandName, productType, price, rating, description, }=product;
     const addCartHandle = ()=>{
-        fetch('http://localhost:5000/cart',{
+        fetch('https://brand-shope.vercel.app/cart',{
             method:'POST',
             headers:{
                 "Content-Type":"application/json"
@@ -15,6 +16,10 @@ const ProductDetails = () => {
         .then(res => res.json())
         .then(data =>{
             console.log(data)
+
+            if(data.acknowledged){
+                toast.success('Successfully Add to Cart!')
+            }
             
         })
     }

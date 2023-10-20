@@ -2,6 +2,7 @@
 import { Link, NavLink, useNavigate } from "react-router-dom";
 import { BiSolidUserCircle } from "react-icons/bi";
 import { useContext } from "react";
+import toast from 'react-hot-toast'
 import { AuthContext } from "../../Context/AuthProvider";
 
 
@@ -14,6 +15,7 @@ const Header = () => {
     const logOutHandle = () => {
         signout()
             .then(() => {
+                toast.success('Successfully Logout!')
                 navigate('/')
             })
             .catch(error => console.log(error.message))
