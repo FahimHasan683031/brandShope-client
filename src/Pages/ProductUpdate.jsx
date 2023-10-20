@@ -1,8 +1,16 @@
+import { useEffect, useState } from "react";
 import toast from "react-hot-toast";
 import { useLoaderData, useNavigate } from "react-router-dom";
 
 const ProductUpdate = () => {
-    const data = useLoaderData()
+    const LoadData = useLoaderData()
+    const [data, setData] = useState({})
+    useEffect(() => {
+        setData(LoadData)
+    }, [LoadData])
+
+    console.log(data)
+
     const navigate = useNavigate()
     const formHandle = e => {
         e.preventDefault()
@@ -27,7 +35,7 @@ const ProductUpdate = () => {
             .then(res => res.json())
             .then(data => {
                 console.log(data)
-                if(data.modifiedCount){
+                if (data.modifiedCount) {
                     toast.success('Successfully Update!')
                     navigate('/')
                 }
@@ -106,10 +114,9 @@ const ProductUpdate = () => {
                     </div>
                 </div>
 
-                <textarea required  className="w-full my-6 drop-shadow-lg p-3 rounded " name="description" defaultValue={data?.description} id="" cols="30" rows="5"></textarea>
+                <textarea required className="w-full my-6 drop-shadow-lg p-3 rounded " name="description" defaultValue={data?.description} id="" cols="30" rows="5"></textarea>
                 <input className="w-full font-bold my-5 cursor-pointer py-3 rounded-md text-white bg-purple-700" type="submit" value="Update" />
             </form>
-
         </div>
     );
 };

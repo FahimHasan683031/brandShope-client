@@ -1,6 +1,6 @@
 import { useLoaderData } from "react-router-dom";
 import CartSingle from "./CartSingle";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Swal from 'sweetalert2'
 
 
@@ -8,7 +8,11 @@ import Swal from 'sweetalert2'
 
 const Cart = () => {
   const LoadProducts = useLoaderData()
-  const [products, setProducts] = useState(LoadProducts)
+  const [products, setProducts] = useState([])
+
+  useEffect(() => {
+    setProducts(LoadProducts)
+}, [LoadProducts])
   const deleteHandle = (name) => {
 
     Swal.fire({

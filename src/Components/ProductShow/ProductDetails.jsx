@@ -1,9 +1,15 @@
 import { Link, useLoaderData } from "react-router-dom";
 import { Rating } from "@mui/material";
 import toast from "react-hot-toast";
+import { useEffect, useState } from "react";
 
 const ProductDetails = () => {
-    const product = useLoaderData()
+    const LoadProduct = useLoaderData()
+    const [product, setProduct]=useState({})
+    useEffect(() => {
+        setProduct(LoadProduct)
+    }, [LoadProduct])
+    console.log(product)
     const { name, imageUrl, brandName, productType, price, rating, description, }=product;
     const addCartHandle = ()=>{
         fetch('https://brand-shope.vercel.app/cart',{
@@ -25,7 +31,7 @@ const ProductDetails = () => {
     }
     return (
         <div>
-            <div className="max-w-screen-sm mx-auto my-10 px-6">
+             <div className="max-w-screen-sm mx-auto my-10 px-6">
                 <img className="h-[350px] w-full mb-4 " src={imageUrl} alt="" />
                 <h1 className="text-3xl font-bold text-purple-700 mb-6">{name}</h1>
                 <div className="flex justify-between mb-6 text-lg font-bold text-gray-500">
