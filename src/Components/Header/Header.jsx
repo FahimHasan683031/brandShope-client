@@ -25,7 +25,7 @@ const Header = () => {
             <div className=" py-3 px-4 max-w-screen-xl mx-auto ">
                 <div className=" flex justify-between items-center">
                     <div>
-                        <img className="w-[120px] h-[50px]" src="https://i.ibb.co/HPYmvSh/360-F-475785478-r4v-Z4-Dydg-Wey-Ftqz-Pqkdnd-ONspy-NYen-O.jpg" alt="" />
+                        <img className="w-[80px] h-[60px]" src="https://i.ibb.co/nQppLHK/Date-2.png" alt="" />
                     </div>
                     <div className="hidden md:block">
                         <div className="text-base font-bold flex gap-6">
@@ -63,7 +63,7 @@ const Header = () => {
                         {
                             user ? <div className="flex gap-4 items-center">
                                 {
-                                    user.photoURL ? <img className="w-10 h-10 rounded-full" src={user?.photoURL} alt="" /> : <BiSolidUserCircle className="w-[50px] h-[50px]"></BiSolidUserCircle>
+                                    user?.photoURL ? <img className="w-10 h-10 rounded-full" src={user?.photoURL} alt="" /> : <BiSolidUserCircle className="w-[50px] h-[50px]"></BiSolidUserCircle>
                                 }
 
 

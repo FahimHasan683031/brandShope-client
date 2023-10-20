@@ -10,34 +10,34 @@ const Footer = () => {
                 
             <nav className="flex justify-center mt-10">
                 <div>
-                <header className=" font-bold text-center  text-lg md:text-3xl my-4 text-orange-500">EVENTS SERVICES</header>
+                <img className="w-28 h-28" src="https://i.ibb.co/PFb49Mp/Date-2-removebg-preview.png" alt="" />
                     <div className="flex justify-center gap-2 md:gap-5 my-3">
-                    <FaFacebookF className="text-3xl p-1 text-white rounded-full bg-orange-500"></FaFacebookF>
-                    <AiFillInstagram className="text-3xl p-1 text-white rounded-full bg-orange-500"></AiFillInstagram>
-                    <AiFillLinkedin className="text-3xl p-1 text-white rounded-full bg-orange-500"></AiFillLinkedin>
-                    <AiOutlineTwitter className="text-3xl p-1 text-white rounded-full bg-orange-500"></AiOutlineTwitter>
+                    <FaFacebookF className="text-3xl p-1 text-white rounded-full bg-purple-700"></FaFacebookF>
+                    <AiFillInstagram className="text-3xl p-1 text-white rounded-full bg-purple-700"></AiFillInstagram>
+                    <AiFillLinkedin className="text-3xl p-1 text-white rounded-full bg-purple-700"></AiFillLinkedin>
+                    <AiOutlineTwitter className="text-3xl p-1 text-white rounded-full bg-purple-700"></AiOutlineTwitter>
                 </div>
                 </div>
                     
                     
                 </nav>
                 <nav className="flex flex-col gap-1 md:gap-3">
-                    <header className="font-bold text-lg text-orange-500">Services</header>
-                    <a className="link link-hover">Conferences and Seminars</a>
-                    <a className="link link-hover">Trade Shows and Expos</a>
-                    <a className="link link-hover">Team Building Workshops</a>
-                    <a className="link link-hover">Product Launches</a>
-                    <a className="link link-hover">Award Ceremonies</a>
+                    <header className="font-bold text-lg text-purple-500">Brands</header>
+                    <a className="link link-hover">Google</a>
+                    <a className="link link-hover">Samsung</a>
+                    <a className="link link-hover">Apple</a>
+                    <a className="link link-hover">One Plus</a>
+                    <a className="link link-hover">Dell</a>
                 </nav>
                 <nav className="flex flex-col gap-1 md:gap-3">
-                    <header className="font-bold text-lg text-orange-500">Company</header>
+                    <header className="font-bold text-lg text-purple-500">Company</header>
                     <a className="link link-hover">Home</a>
-                    <a className="link link-hover">Services</a>
+                    <a className="link link-hover">Add Product</a>
                     <a className="link link-hover">Blog</a>
                     <a className="link link-hover">About Us</a>
                 </nav>
                 <nav className="flex flex-col gap-1 md:gap-3">
-                    <header className="font-bold text-lg text-orange-500">Legal</header>
+                    <header className="font-bold text-lg text-purple-500">Legal</header>
                     <a className="link link-hover">Terms of use</a>
                     <a className="link link-hover">Privacy policy</a>
                     <a className="link link-hover">Cookie policy</a>
