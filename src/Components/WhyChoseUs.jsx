@@ -3,7 +3,7 @@ import { GiDividedSquare } from "react-icons/gi";
 const WhyChoseUs = () => {
 
     return (
-        <div className="max-w-screen-xl px-6 mx-auto my-20 grid grid-cols-1  lg:grid-cols-2 gap-4">
+        <div className="max-w-screen-xl mt-28 px-6 mx-auto my-20 grid grid-cols-1  lg:grid-cols-2 gap-4">
             <div data-aos="fade-left" className="text-center lg:text-left">
                 <p className="text-lg font-medium  py-3">Our advantages</p>
                 <h1 className="text-4xl font-bold text-purple-700 leading-[50px]">Why do people trust <br /> our company?</h1>
