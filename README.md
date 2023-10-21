@@ -1,4 +1,4 @@
-# BRAND SHOP
+# BRAND ZONE
 
 Website Live Link : [https://brand-shop-b4dfc.web.app/](https://brand-shop-b4dfc.web.app/)
 
