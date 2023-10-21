@@ -9,7 +9,7 @@ const CartSingle = ({product,deleteHandle}) => {
     }
     return (
 
-        <div style={sadow} className="grid grid-cols-5 bg-white  gap-3 rounded-lg py-6 px-4 mb-5">
+        <div style={sadow} className="grid grid-cols-5 bg-white dark:bg-gray-300  gap-3 rounded-lg py-6 px-4 mb-5">
             <div className="col-span-2">
                 <img className="h-[250px] w-full" src={imageUrl} alt="Movie" />
             </div>
@@ -24,7 +24,7 @@ const CartSingle = ({product,deleteHandle}) => {
                     <p>Price: <span className="text-purple-700">{price}</span>$</p>
                     <p className="mr-3 flex align-middle gap-2 ">Rating: <Rating name="read-only" value={rating} readOnly /> </p>
                 </div>
-                <p className="text-sm mb-3 font-medium text-gray-400">{description.slice(0, 150)}...</p>
+                <p className="text-sm mb-3 font-medium text-gray-400  dark:text-gray-500">{description.slice(0, 150)}...</p>
                 <div className="flex gap-9 mt-6">
                     <Link onClick={()=>deleteHandle(name)} className="text-white font-medium py-2 px-4 rounded-full bg-purple-700">Delete Form Cart</Link>
                     

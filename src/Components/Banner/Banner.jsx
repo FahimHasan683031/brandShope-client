@@ -13,7 +13,7 @@ const Banner = () => {
                     <Link className="px-3 py-2 bg-purple-600 text-white font-medium rounded" to='/services'>Brands</Link>
                 </div>
                 <div  >
-                    <div className="grid gap-3 bg-white p-3   grid-cols-2 ">
+                    <div className="grid gap-3 bg-white dark:bg-[#25282c] p-3   grid-cols-2 ">
 
                         <img className="w-full h-full" src="https://www.albawaba.com/sites/default/files/styles/d08_standard/public/2022-06/shutterstock_1973343692.jpg?h=82f92a78&itok=iLp-lQku" alt="" />
 
