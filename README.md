@@ -1,8 +1,19 @@
-# React + Vite
+# BRAND SHOP
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Website Live Link : [https://brand-shop-b4dfc.web.app/](https://brand-shop-b4dfc.web.app/)
 
-Currently, two official plugins are available:
+Website Live Link : [https://brand-shop-as10.surge.sh/](https://brand-shop-as10.surge.sh/)
+ 
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
+
+- User Registration.
+- Password Validation.
+- Product upload and store mongodb databases using express.
+- Private Routing.
+- product updating.
+- Add to cart.
+- Delete product form cart page.
+- After login redirect user to destination.
+
+
